@@ -1,0 +1,157 @@
+.cardContainer {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: .2s;
+  min-height: 25rem;
+}
+
+.cardContainer:hover {
+  background-color: #FF214111;
+}
+
+.nome {
+  text-transform: capitalize;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  color: var(--cor-gray);
+}
+
+.cardContainer img {
+  max-width: 60%;
+}
+
+.tipos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.tipos p {
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+}
+
+.loading {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: .2s;
+    min-height: 25rem;
+}
+
+.loading path {
+  fill: var(--cor-principal);
+}
+
+.loading svg {
+  width: 20%;
+  height: 20%;
+  animation: rotating 2s infinite;
+}
+
+@keyframes rotating {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1400px) {
+  .loading {
+    min-height: 20rem;
+  }
+  .cardContainer {
+    position: relative;
+    min-height: initial;
+    max-height: 20rem;
+  }
+  .nome {
+    padding: 0.5rem;
+  }
+  .nome p:nth-child(1) {
+    font-size: 1.5rem;
+  }
+  .nome p {
+    font-size: 1rem;
+    margin: 0;
+  }
+}
+
+@media (max-width: 910px) {
+  .loading {
+    min-height: 15rem;
+  }
+  .nome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nome p:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 710px) {
+  .loading {
+    min-height: 10rem;
+  }
+  .tipos {
+    display: none;
+  }
+  .cardContainer {
+    flex-direction: column-reverse;
+  }
+  .nome p:nth-child(1) {
+    font-size: 2.5vw;
+  }
+  .nome p:nth-child(2) {
+    display: block;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  .cardContainer img {
+    margin-top: 1rem;
+    max-width: 10rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .cardContainer img {
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .cardContainer img {
+    margin-top: 1rem;
+    max-width: 80%;
+  }
+  .nome p:nth-child(2) {
+    font-size: 0.75rem;
+  }
+  .nome p:nth-child(1) {
+    font-size: 3vw;
+  }
+  .loading {
+    min-height: 8rem;
+  }
+}
+

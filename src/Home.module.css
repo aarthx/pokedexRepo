@@ -1,0 +1,264 @@
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 3fr;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  height: 100dvh
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.titulo {
+  color: var(--cor-light);
+  font-size: 4rem;
+}
+
+.search input {
+  background: var(--cor-light);
+  text-align: center;
+  width: 50rem;
+  height: 3.5rem;
+  font-size: 1.75rem;
+  border-radius: 10px;
+  color: var(--cor-gray);
+  margin:  0 0 4rem 0;
+}
+
+.search input::placeholder {
+  color: #666666bb;
+}
+
+.pokemonBox {
+  overflow-y: auto;
+  border-radius: 10px;
+  background: var(--cor-light);
+  height: 100%;
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+.pokemonBox::-webkit-scrollbar {
+  width: 1em;
+}
+ 
+.pokemonBox::-webkit-scrollbar-track {
+  border-radius: 0 10px 10px 0;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.pokemonBox::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--cor-gray);
+}
+
+.pokemonList{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.detalhes {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.blueBall {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  background: #2EACFC;
+  border: 4px solid var(--cor-light);
+}
+
+.balls {
+  position: absolute;
+  top: 2rem;
+  left: 10rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.balls li {
+  height: 1.875rem;
+  width: 1.875rem;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.balls li:nth-child(1) {
+  background: #74CB48;
+}
+
+.balls li:nth-child(2) {
+  background: #F9CF30;
+}
+
+.balls li:nth-child(3) {
+  background: #FF2141;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+  border-radius: 10px;
+  background: var(--cor-light);
+  height: 100%;
+  width: 90%;
+  margin-bottom: 2rem;
+}
+
+.loading path {
+  fill: var(--cor-principal);
+}
+
+.loading svg {
+  width: 20%;
+  height: 20%;
+  animation: rotating 2s infinite;
+}
+
+@keyframes rotating {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .pokemonList{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .detalhes{
+    display: none;
+  }
+}
+
+@media (max-width: 910px) {
+  .pokemonList{
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .conteudo {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto 3fr;
+    align-items: center;
+    justify-items: center;
+  }
+  .search {    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+  }  
+  .search input {
+    width: 25rem;
+    font-size: 1.5rem;
+    margin: 0;
+  }  
+  .pokemonBox {
+    grid-column: -1 / 1;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .titulo {
+    color: var(--cor-light);
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 710px) {
+  .conteudo {
+    grid-template-columns: auto auto;
+  }
+  .titulo {
+    display: none;
+  }
+  .search input {
+    width: 25rem;
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .conteudo {
+    gap: 0;
+    grid-template-columns: auto auto;
+  }
+  .search input {
+    max-width: 30rem;
+    font-size: 1.25rem;
+  }
+  .search input {
+    max-width: 20rem;
+    max-height: 3rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .pokemonList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .search input {
+    max-width: 16rem;
+    max-height: 3rem;
+    font-size: 1rem;
+  }
+  .conteudo {
+    gap: 0;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 350px) {
+  .pokemonList{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.5rem;
+  }
+  .search input {
+    max-width: 14rem;
+    max-height: 2.5rem;
+    font-size: 1rem;
+  }
+  .conteudo {
+    gap: 0;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 300px) {
+  .logo svg {
+    max-width: 85%;
+  }
+}
