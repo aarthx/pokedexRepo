@@ -35,7 +35,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: auto;
+  overflow-y: scroll;
   border-radius: 10px;
   background: var(--cor-light);
   height: 100%;
