@@ -105,7 +105,7 @@ const Home = () => {
           type="text"
           placeholder="Digite o nome do pokemom"
           value={busca}
-          onChange={(e) => setBusca(e.target.value)}
+          onChange={(e) => setBusca(e.target.value.toLowerCase())}
         />
       </div>
       <div
