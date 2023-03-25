@@ -113,6 +113,7 @@ const Home = () => {
         className={styles.pokemonBox}
         ref={pokeBox}
         onScroll={debounce(() => verificaScroll())}
+        onTouchMove={debounce(() => verificaScroll())}
       >
         <ul className={styles.pokemonList} ref={pokeList}>
           {pokemonsURL &&
