@@ -36,7 +36,7 @@
 }
 
 .pokemonBox {
-  overflow-y: auto;
+  overflow-y: scroll;
   border-radius: 10px;
   background: var(--cor-light);
   height: 100%;
