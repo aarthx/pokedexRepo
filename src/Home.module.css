@@ -44,7 +44,7 @@
   margin-bottom: 2rem;
 }
 
-.pokemonBox::-webkit-scrollbar {
+/* .pokemonBox::-webkit-scrollbar {
   width: 1em;
 }
  
@@ -56,7 +56,7 @@
 .pokemonBox::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: var(--cor-gray);
-}
+} */
 
 .pokemonList{
   display: grid;
