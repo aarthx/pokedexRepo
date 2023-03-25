@@ -28,7 +28,7 @@ const Home = () => {
 
   function verificaScroll() {
     if (
-      pokeBox.current.scrollTop >= 0.5 * pokeList.current.clientHeight &&
+      pokeBox.current.scrollTop >= 0.25 * pokeList.current.clientHeight &&
       !buscando
     ) {
       adicionaPokemons();
