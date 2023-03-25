@@ -36,7 +36,6 @@
 }
 
 .pokemonBox {
-  touch-action: none;
   overflow-y: scroll;
   border-radius: 10px;
   background: var(--cor-light);
